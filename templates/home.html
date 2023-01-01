@@ -1,3 +1,53 @@
-<h1>
-Hello World    
-<h1>
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Covid Prediction</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+      <input type="text" name="USMER" placeholder="USMER" required="required" /><br>
+    	<input type="text" name="MEDICAL_UNIT" placeholder="MEDICAL_UNIT" required="required" /><br>
+        <input type="text" name="SEX" placeholder="SEX" required="required" /><br>
+        <input type="text" name="PATIENT_TYPE" placeholder="PATIENT_TYPE" required="required" /><br>
+        <input type="text" name="PNEUMONIA" placeholder="PNEUMONIA" required="required" /><br>
+        <input type="text" name="PREGNANT" placeholder="PREGNANT" required="required" /><br>
+        <input type="text" name="Age" placeholder="Age" required="required" /><br>
+        <input type="text" name="DIABETES" placeholder="DIABETES" required="required" /><br>
+        <input type="text" name="COPD" placeholder="COPD" required="required" /><br>
+        <input type="text" name="ASTHMA" placeholder="ASTHMA" required="required" /><br>
+        <input type="text" name="INMSUPR" placeholder="INMSUPR" required="required" /><br>
+        <input type="text" name="HIPERTENSION" placeholder="HIPERTENSION" required="required" /><br>
+        <input type="text" name="OTHER_DISEASE" placeholder="OTHER_DISEASE" required="required" /><br>
+        <input type="text" name="CARDIOVASCULAR" placeholder="CARDIOVASCULAR" required="required" /><br>
+        <input type="text" name="OBESITY" placeholder="OBESITY" required="required" /><br>
+        <input type="text" name="RENAL_CHRONIC" placeholder="RENAL_CHRONIC" required="required" /><br>
+        <input type="text" name="TOBACCO" placeholder="TOBACCO" required="required" /><br>
+        <input type="text" name="CLASIFFICATION_FINAL" placeholder="CLASIFFICATION_FINAL" required="required" /><br>
+
+       
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+  
+   
+ </div>
+ {{prediction_text}}
+
+</body>
+</html>
